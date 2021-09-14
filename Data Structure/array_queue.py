@@ -29,8 +29,8 @@ class ArrayQueue:
         if self.is_empty():
             raise Empty('Queue is empty')
         data = self._data[self._front]
-        self._data[self._front] = None      # help garbage collection
-        self._front = (self._front + 1) % len(self._data)       # circularly
+        self._data[self._front] = None              # help garbage collection
+        self._front = (self._front + 1) % len(self._data)       # circularly design
         self._size -= 1
         return data
 
